@@ -63,40 +63,43 @@
   .topic { font-weight: 400; color: var(--accent); margin-bottom: 0.5rem; font-size: 1rem; }
   .progress { font-size: 0.75rem; color: var(--muted); margin-bottom: 0.6rem; text-transform: uppercase; letter-spacing: 0.08em; }
 
-  /* The big floating text area — monkeytype's signature look */
+  /* The big floating text area — monkeytype's signature look.
+     Centered horizontally; ~150% larger than the original sizes. */
   pre, .codeblock, .prose-display {
     font-family: "JetBrains Mono", "Fira Code", "SF Mono", "Menlo", "Consolas", monospace;
     background: transparent; padding: 1.5rem 0 1rem; border-radius: 0;
     white-space: pre-wrap; word-break: break-word;
-    font-size: 1.4rem; line-height: 1.7;
-    color: var(--muted);
+    font-size: 2.1rem; line-height: 1.7;
+    color: #9a9c9f;          /* lighter base gray for untyped/muted text */
+    text-align: center;
     /* Anti-cheat: disable text selection so students can't copy the snippet */
     user-select: none; -webkit-user-select: none; -moz-user-select: none;
     min-height: 6rem;
   }
   .prose-display {
     font-family: Georgia, "Times New Roman", serif;
-    font-size: 1.3rem; line-height: 1.8;
+    font-size: 1.95rem; line-height: 1.8;
     background: transparent;
     border-left: none;
+    text-align: center;
   }
 
   .codeline { display: block; padding: 0.12rem 0; }
   .codeline.done    { color: var(--ink); opacity: 0.95; }
   .codeline.current { color: var(--ink); }
-  .codeline.pending { color: var(--muted); opacity: 0.55; }
+  .codeline.pending { color: #9a9c9f; opacity: 0.85; }
   .arrow { display: inline-block; width: 1.5em; color: var(--accent); opacity: 0.6; }
 
   /* Live per-character coloring (monkeytype style):
-     untyped = muted gray, typed correctly = bright text, typed wrong = red. */
+     untyped = lighter muted gray, typed correctly = bright text, typed wrong = red. */
   .char-ok      { color: var(--ink); }
   .char-err     { color: var(--err); }
-  .char-pending { color: var(--muted); opacity: 0.55; }
+  .char-pending { color: #9a9c9f; opacity: 0.85; }
 
   /* Multi-sentence prose */
   .prose-sentence         { display: block; padding: 0.2rem 0; }
   .prose-sentence.done    { color: var(--ink); opacity: 0.9; }
-  .prose-sentence.pending { color: var(--muted); opacity: 0.5; }
+  .prose-sentence.pending { color: #9a9c9f; opacity: 0.8; }
   .prose-sentence.current { color: var(--ink); }
 
   .review-banner {
